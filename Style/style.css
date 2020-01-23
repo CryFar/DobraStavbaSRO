@@ -12,6 +12,7 @@ header {
     width: 100%;
     height: 100px;
     background: #14002c;
+    z-index: 2;
 }
 header .logo {
     position: relative;
@@ -61,4 +62,22 @@ header nav a:hover {
 }
 b {
     font-weight: 700;
+}
+main {
+    position: relative;
+    top: 100px;
+    text-align: center;
+}
+main .bcg {
+    width: 100%;
+    height: 800px;
+    z-index: 0;
+}
+main .bcg img {
+    height: 120%;
+    z-index: 0;
+}
+main section {
+    background: red;
+    z-index: 1;
 }
