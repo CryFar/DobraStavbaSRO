@@ -8,6 +8,18 @@
 html {
     scroll-behavior: smooth;
 }
+h1 {
+    font-size: 35px;
+}
+h2 {
+    font-size: 30px;
+}
+h3 {
+    font-size: 25px;
+}
+p {
+    font-size: 15px;
+}
 header {
     position: fixed;
     top: 0;
@@ -21,14 +33,14 @@ header .logo img {
     position: absolute;
     color: white;
     top: 5px;
-    left: 200px;
+    left: 5%;
     width: auto;
     height: 90px;
 }
 header nav {
     position: absolute;
     top: 25%;
-    right: 200px;
+    right: 5%;
     height: 50px;
     width: 750px;
 }
@@ -58,23 +70,33 @@ main {
 }
 main .bcg {
     width: 100%;
-    height: 800px;
+    height: 100%;
+    margin: 0 auto;
     z-index: 0;
 }
 main .bcg img {
-    height: 100%;
+    width: 100%;
     z-index: 0;
 }
 main section {
     background: white;
     margin: 0 auto;
-    width: 1000px;
-    border: 1px solid gray;
+    width: 1200px;
     z-index: 1;
 }
-main section .text {
+main section .grid {
+    display: grid;
+    grid-template-columns: 600px 600px;
+    grid-template-rows: 200px 200px;
+}
+main section .grid .text {
+    position: relative;
+    background: white;
+    border-left: 1px solid #f1f1f1;
+    border-right: 1px solid #f1f1f1;
+    padding: 15px;
     text-align: left;
 }
-main section .text:nth-child(odd){
-    text-align: right;
+main section .text:hover {
+    background: #f1f1f1;
 }
