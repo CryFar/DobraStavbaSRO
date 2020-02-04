@@ -81,12 +81,12 @@ main .bcg img {
 main section {
     background: white;
     margin: 0 auto;
-    width: 1200px;
+    max-width: 1200px;
     z-index: 1;
 }
 main section .grid {
     display: grid;
-    grid-template-columns: 600px 600px;
+    grid-template-columns: minmax(300px, 600px) minmax(300px, 600px);
     grid-template-rows: 200px 200px;
 }
 main section .grid .text {
@@ -95,8 +95,36 @@ main section .grid .text {
     border-left: 1px solid #f1f1f1;
     border-right: 1px solid #f1f1f1;
     padding: 15px;
+    padding-left: 90px;
     text-align: left;
 }
 main section .text:hover {
     background: #f1f1f1;
+}
+main section .gallery a img {
+    float: left;
+    width: 20%;
+    height: auto;
+    border: 2px solid #fff;
+    transition: transform .3s ease;
+}
+main section .gallery a:hover img {
+    transform: scale(1.05);
+    transition: transform .3s ease;
+    z-index: 5;
+}
+main section .gallery a.big img {
+    width: 40%;
+}
+.clear {
+    clear: both;
+    float: none;
+    width: 100%;
+}
+@media (max-width: 768px) {
+    main section .grid {
+        display: grid;
+        grid-template-columns: minmax(100px, 768px);
+        grid-template-rows: 200px 200px 200px 200px;
+    }
 }
