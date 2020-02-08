@@ -46,6 +46,9 @@ header .logo img {
     height: 90px;
     z-index: 3;
 }
+header .toggleNav {
+    display: none;
+}
 header nav {
     position: absolute;
     top: 25%;
