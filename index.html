@@ -16,7 +16,7 @@
         });
     </script>
 </head>
-<body id="Domov">
+<body id="domov">
     <header>
         <div class="logo">
             <img src="Style/Logo Rectangle.svg" alt="logo">
@@ -27,11 +27,11 @@
             <span></span>
         </div>
         <nav>
-            <a href="#Domov">Domov</a>
-            <a href="#CoPonukame">Čo Ponúkame ?</a>
-            <a href="#Referencie">Referencie</a>
-            <a href="#Kontakt">Kontakt</a>
-            <a href="#O Nás">O Nás</a>
+            <a href="#domov">Domov</a>
+            <a href="#ponuka">Čo Ponúkame ?</a>
+            <a href="#referencie">Referencie</a>
+            <a href="#kontakt">Kontakt</a>
+            <!--<a href="#O Nás">O Nás</a>-->
         </nav>
     </header>
     <main>
@@ -98,7 +98,7 @@
                 .jssora072.jssora072dn {opacity:.4;}
                 .jssora072.jssora072ds {opacity:.3;pointer-events:none;}
             </style>
-            <div id="jssor_1" style="position:relative;margin:0 auto;top:0px;left:0px;width:1200px;height:600px;overflow:hidden;visibility:hidden;">
+            <div id="jssor_1" style="position:relative;margin:0 auto;top:0px;left:0px;width:1200px;height:600px;overflow:hidden;visibility:hidden;border-radius:10px;">
                 <!-- Loading Screen -->
                 <div data-u="loading" class="jssorl-004-double-tail-spin" style="position:absolute;top:0px;left:0px;width:100%;height:100%;text-align:center;background-color:rgba(0,0,0,0.7);">
                     <img style="margin-top:-19px;position:relative;top:50%;width:38px;height:38px;" src="Images/double-tail-spin.svg" />
@@ -127,43 +127,72 @@
             </script>
             <!-- #endregion Jssor Slider End -->
         </div>
-        <section id="CoPonukame">
-            <h2>Čo ponúkame ?</h2>
-            <p>Všetko a ešte viac</p>
-            <div class="grid">
-                <div class="text">
-                    <img class="icon" src="Style/Icon 1.svg" alt="Icon">
-                    <h3><b>Rekonštrukcie</b></h3>
-                    <p>No tak tipicky rekonštruovať nejaký bytík.</p>
+        <section id="ponuka">
+            <div class="heading">
+                 <h1>Čo ponúkame ?</h1>
+            </div>
+            <div class="list">
+                <div class="item">
+                    <div class="icon">
+                        <img src="style/Icon 1.svg" alt="">
+                    </div>
+                    <h2>Rekonštrukcie bytov</h2>
+                    <div class="text">
+                        Realizujeme kompletné rekonštrukcie bytových priestorov.
+                    </div>
+                    <div class="wrapper">
+                        <a href="#kontakt" class="contact">
+                            <h2>Kontakt</h2>
+                        </a>
+                    </div>
                 </div>
-                <div class="text">
-                    <img class="icon" src="Style/Icon 1.svg" alt="Icon">
-                    <h3><b>Ešte niečo</b></h3>
-                    <p>Hmmm co to bolo</p>
-                </div>
-                <div class="text">
-                    <img class="icon" src="Style/Icon 1.svg" alt="Icon">
-                    <h3><b>Fakt tam nieco bolo</b></h3>
-                    <p>Ale co</p>
-                </div>
-                <div class="text">
-                    <img class="icon" src="Style/Icon 1.svg" alt="Icon">
-                    <h3><b>Ešte niečo tam bude ale neviem si spomenúť.</b></h3>
-                    <p>Aale fakt ja uz neviem</p>
+                <div class="item">
+                    <div class="icon">
+                        <img src="style/Icon 1.svg" alt="">
+                    </div>
+                    <h2>Montáž obkladov - dažby</h2>
+                    <div class="text">
+
+                    </div>
+                    <div class="wrapper">
+                        <a href="#kontakt" class="contact">
+                            <h2>Kontakt</h2>
+                        </a>
+                    </div>
                 </div>
             </div>
+            <div class="clear"></div>
         </section>
-        <section>
-            <h2>Realizované Projekty</h2>
+        <section id="referencie">
+            <div class="heading">
+                <h1>Referencie</h1>
+           </div>
             <div class="gallery">
                 <a href="Images/img1.jpg"><img src="Images/img1.jpg" alt="" title="Stavba Niecoho :D"></a>
                 <a href="Images/img2.jpg"><img src="Images/img2.jpg" alt="" title="Krb nejaky :D"></a>
                 <a href="Images/img1.jpg"><img src="Images/img1.jpg" alt="" title="Stavba Niecoho :D"></a>
                 <a href="Images/img2.jpg"><img src="Images/img2.jpg" alt="" title="Krb nejaky :D"></a>
                 <a href="Images/img1.jpg"><img src="Images/img1.jpg" alt="" title="Stavba Niecoho :D"></a>
+                <a href="Images/img2.jpg"><img src="Images/img2.jpg" alt="" title="Stavba Niecoho :D"></a>
+                <a href="Images/img1.jpg"><img src="Images/img1.jpg" alt="" title="Krb nejaky :D"></a>
+                <a href="Images/img2.jpg"><img src="Images/img2.jpg" alt="" title="Stavba Niecoho :D"></a>
                 <div class="clear"></div>
             </div>
         </section>
+        <section id="kontakt">
+            <div class="heading">
+                <h2>Kontakt</h2>
+            </div>
+            <div>
+                <h3>Vladimír Slačka</h3>
+                <p>E-mail: <a target="_blank" href="mailto:vladimirslacka@gmail.com">vladimirslacka@gmail.com</a></p>
+                <p>Phone: <a href="tel:+421910601407">+421 910 601 407</a></p>
+            </div>
+        </section>
+        <div class="clear"></div>
+        <footer>
+            &copy; 2020 Dobrá Stavba
+        </footer>
     </main>
 </body>
 </html>
