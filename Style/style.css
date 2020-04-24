@@ -105,6 +105,10 @@ main section .heading {
     padding: 10px;
     border-radius: 10px;
 }
+main section .heading h1 {
+    color: white;
+    font-weight: bold;
+}
 main section .list {
     position: relative;
     margin-top: 50px;
