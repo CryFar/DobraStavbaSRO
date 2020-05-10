@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Nunito', sans-serif;
     font-weight: 400;
     color: #c1c1c1;
 }
@@ -52,9 +52,8 @@ header .toggleNav {
 header nav {
     position: absolute;
     top: 25%;
-    right: 0px;
+    right: 5%;
     height: 50px;
-    width: 750px;
     z-index: 3;
 }
 header nav a {
@@ -125,6 +124,7 @@ main section .list .item {
     height: 500px;
     background: rgb(32, 35, 42);
     border-radius: 10px;
+    border: 3px solid transparent;
 }
 main section .list .item h2 {
     color: white;
@@ -137,12 +137,12 @@ main section .list .item .text
     font-size: 20px;
     padding: 20px;
 }
-main section .list .item:hover .wrapper .contact  {
+main section .list .item:hover .wrapper .slide-button  {
     bottom: 0;
     transition: 0.5s;
 }
 main section .list .item:hover {
-
+    border: 3px solid white;
     transition: 0.5s;
 }
 main section .list .item .wrapper {
@@ -153,9 +153,11 @@ main section .list .item .wrapper {
     left: 0;
     overflow: hidden;
 }
-main section .list .item .wrapper .contact {
+main section .list .item .wrapper .slide-button {
     position: absolute;
     background: rgb(25, 27, 32);
+    color: white;
+    text-decoration: none;
     border-radius: 10px;
     padding: 20px;
     width: 100%;
@@ -196,7 +198,14 @@ main section .gallery a:hover img {
 main section .gallery a.big img {
     width: 40%;
 }
-footer {
+main section .contact {
+    display: inline-block;
+    background: rgb(32, 35, 42);
+    border-radius: 10px;
+    width: 75%;
+    height: 300px;
+}
+main footer {
     position: relative;
     display: block;
     width: 100%;
@@ -212,12 +221,71 @@ footer {
     float: none;
     width: 100%;
 }
-@media (max-width: 768px) {
-    main section .grid {
-        display: grid;
-        grid-template-columns: minmax(100px, 768px);
-        grid-template-rows: 200px 200px 200px 200px;
+@media (max-width: 1000px) {
+    header .hamburger {
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        right: 20px;
+        top: 15px;
+        margin: 10px;
+        transform: rotate(0deg);
+        transition: .25s;
+        cursor: pointer;
     }
+    header .hamburger span {
+        display: block;
+        position: absolute;
+        height: 5px;
+        width: 100%;
+        background: #ced100;
+        border-radius: 5px;
+        opacity: 1;
+        left: 0;
+        transform: rotate(0deg);
+        transition: .25s;
+    }
+    header .hamburger span:nth-child(1) {
+        top: 5px;
+    }
+    header .hamburger span:nth-child(2) {
+        top: 20px;
+    }
+    header .hamburger span:nth-child(3) {
+        top: 35px;
+    }
+    header .hamburger.open span:nth-child(1) {
+        top: 20px;
+        transform: rotate(135deg);
+    }
+    header .hamburger.open span:nth-child(2) {
+        opacity: 0;
+        left: -60px;
+    }
+    header .hamburger.open span:nth-child(3) {
+        top: 20px;
+        transform: rotate(-135deg);
+    }
+    header nav {
+        position: fixed;
+        background: rgb(25, 27, 32);
+        top: 0;
+        right: -500px;
+        height: 100%;
+        width: 40%;
+        opacity: 0.9;
+    }
+    header nav a {
+        display: block;
+        margin: 5px;
+        font-size: 25px;
+        border-top: 3px solid white;
+    }
+    header .logo img {
+        left: 0;
+    }
+}
+@media (max-width: 768px) {
     main section .gallery a img {
         float: left;
         width: 50%;
