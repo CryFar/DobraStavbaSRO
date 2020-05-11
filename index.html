@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="Scripts/simple-lightbox.js"></script>
+    <script src="Scripts/menu.js"></script>
     <script>
         $(function(){
             var $gallery = $('.gallery a').simpleLightbox();
@@ -22,12 +23,12 @@
         <div class="logo">
             <img src="Style/Logo Rectangle.svg" alt="logo">
         </div>
-        <div class="hamburger">
+        <div class="hamburger" id="menu">
             <span></span>
             <span></span>
             <span></span>
         </div>
-        <nav>
+        <nav id="navbar">
             <a href="#domov">Domov</a>
             <a href="#ponuka">Čo Ponúkame ?</a>
             <a href="#referencie">Referencie</a>

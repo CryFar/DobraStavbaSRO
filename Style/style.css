@@ -285,26 +285,37 @@ main footer {
     header .hamburger span:nth-child(3) {
         top: 35px;
     }
-    header .hamburger.open span:nth-child(1) {
+    header .hamburger.active span:nth-child(1) {
         top: 20px;
         transform: rotate(135deg);
     }
-    header .hamburger.open span:nth-child(2) {
+    header .hamburger.active span:nth-child(2) {
         opacity: 0;
         left: -60px;
     }
-    header .hamburger.open span:nth-child(3) {
+    header .hamburger.active span:nth-child(3) {
         top: 20px;
         transform: rotate(-135deg);
     }
     header nav {
         position: fixed;
         background: rgb(25, 27, 32);
-        top: 0;
-        right: -500px;
+        top: 100px;
+        right: -400px;
         height: 100%;
         width: 40%;
         opacity: 0.9;
+        transition: 0.5s;
+    }
+    header nav.open {
+        position: fixed;
+        background: rgb(25, 27, 32);
+        top: 100px;
+        right: 0;
+        height: 100%;
+        width: 40%;
+        opacity: 0.9;
+        transition: 0.5s;
     }
     header nav a {
         display: block;
