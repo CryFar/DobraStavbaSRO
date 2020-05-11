@@ -39,7 +39,6 @@ header {
 }
 header .logo img {
     position: absolute;
-    color: white;
     top: 5px;
     left: 5%;
     width: auto;
@@ -142,7 +141,7 @@ main section .list .item:hover .wrapper .slide-button  {
     transition: 0.5s;
 }
 main section .list .item:hover {
-    border: 3px solid white;
+    border: 3px solid #a8a8a8;
     transition: 0.5s;
 }
 main section .list .item .wrapper {
@@ -202,8 +201,40 @@ main section .contact {
     display: inline-block;
     background: rgb(32, 35, 42);
     border-radius: 10px;
-    width: 75%;
-    height: 300px;
+    width: 25%;
+    height: 350px;
+    text-align: center;
+}
+main section .profile-picture {
+    width: 150px;
+    margin: 20px auto 20px auto;
+}
+main section .profile-picture img {
+    width: 100%;
+}
+main section .contact h3 {
+    color: white;
+    font-weight: bold;
+}
+main section .icon {
+    position: relative;
+    display: inline-block;
+    background: #a8a8a8;
+    margin: 10px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    transition: 0.3s ease;
+}
+main section .icon:hover {
+    background: #ced100;
+    transition: 0.3s ease;
+}
+main section .icon img {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
 }
 main footer {
     position: relative;
@@ -279,7 +310,7 @@ main footer {
         display: block;
         margin: 5px;
         font-size: 25px;
-        border-top: 3px solid white;
+        border-top: 3px solid #a8a8a8;
     }
     header .logo img {
         left: 0;
