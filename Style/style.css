@@ -351,6 +351,9 @@ main footer {
     }
 }
 @media (max-width: 768px) {
+    main section .text-pool {
+        margin: 0 10px 0 10px;
+    }
     main section .gallery a img {
         float: left;
         width: 50%;
