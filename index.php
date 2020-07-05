@@ -29,11 +29,11 @@
             <span></span>
         </div>
         <nav id="navbar">
-            <a href="#domov">Domov</a>
-            <a href="#o-nas">O Nás</a>
-            <a href="#ponuka">Čo Ponúkame ?</a>
-            <a href="#referencie">Referencie</a>
-            <a href="#kontakt">Kontakt</a>
+            <a class="nav-button" href="#domov">Domov</a>
+            <a class="nav-button" href="#o-nas">O Nás</a>
+            <a class="nav-button" href="#ponuka">Ponuka</a>
+            <a class="nav-button" href="#referencie">Referencie</a>
+            <a class="nav-button" href="#kontakt">Kontakt</a>
         </nav>
     </header>
     <main>
@@ -107,10 +107,22 @@
                 </div>
                 <div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:1200px;height:600px;overflow:hidden;">
                     <div>
-                        <img data-u="image" src="Images/img1.jpg" />
+                        <img data-u="image" src="Images/img1.png" />
                     </div>
                     <div>
-                        <img data-u="image" src="Images/img2.jpg" />
+                        <img data-u="image" src="Images/img2.png" />
+                    </div>
+                    <div>
+                        <img data-u="image" src="Images/img3.png" />
+                    </div>
+                    <div>
+                        <img data-u="image" src="Images/img4.png" />
+                    </div>
+                    <div>
+                        <img data-u="image" src="Images/img5.png" />
+                    </div>
+                    <div>
+                        <img data-u="image" src="Images/img6.png" />
                     </div>
                 </div><a data-scale="0" href="https://www.jssor.com" style="display:none;position:absolute;">html slider</a>
                 <!-- Arrow Navigator -->
@@ -249,14 +261,14 @@
                 <h1>Referencie</h1>
            </div>
             <div class="gallery">
-                <a href="Images/img1.jpg"><img src="Images/img1.jpg" alt="" title="Stavba Niecoho :D"></a>
-                <a href="Images/img2.jpg"><img src="Images/img2.jpg" alt="" title="Krb nejaky :D"></a>
-                <a href="Images/img1.jpg"><img src="Images/img1.jpg" alt="" title="Stavba Niecoho :D"></a>
-                <a href="Images/img2.jpg"><img src="Images/img2.jpg" alt="" title="Krb nejaky :D"></a>
-                <a href="Images/img1.jpg"><img src="Images/img1.jpg" alt="" title="Stavba Niecoho :D"></a>
-                <a href="Images/img2.jpg"><img src="Images/img2.jpg" alt="" title="Stavba Niecoho :D"></a>
-                <a href="Images/img1.jpg"><img src="Images/img1.jpg" alt="" title="Krb nejaky :D"></a>
-                <a href="Images/img2.jpg"><img src="Images/img2.jpg" alt="" title="Stavba Niecoho :D"></a>
+                <a href="Images/img1.png"><img src="Images/img1.png" alt="" title="Stavba Niecoho :D"></a>
+                <a href="Images/img2.png"><img src="Images/img2.png" alt="" title="Krb nejaky :D"></a>
+                <a href="Images/img3.png"><img src="Images/img3.png" alt="" title="Stavba Niecoho :D"></a>
+                <a href="Images/img4.png"><img src="Images/img4.png" alt="" title="Krb nejaky :D"></a>
+                <a href="Images/img5.png"><img src="Images/img5.png" alt="" title="Stavba Niecoho :D"></a>
+                <a href="Images/img6.png"><img src="Images/img6.png" alt="" title="Stavba Niecoho :D"></a>
+                <a href="Images/img7.png"><img src="Images/img7.png" alt="" title="Krb nejaky :D"></a>
+                <a href="Images/img8.png"><img src="Images/img8.png" alt="" title="Stavba Niecoho :D"></a>
                 <div class="clear"></div>
             </div>
         </section>
@@ -265,11 +277,13 @@
                 <h1>Kontakt</h1>
             </div>
             <div class="contact">
-                <div class="profile-picture"><img src="Style/Profile Icon.svg" alt="Profile Icon"></div>
-                <h3>Vladimír Slačka</h3>
-                <a href="mailto:vladimirslacka@gmail.com" class="icon"><img src="Style/Email Icon.svg" alt=""></a>
-                <a href="tel:+421910601407" class="icon"><img src="Style/Phone Icon.svg" alt=""></a>
-                <p>Tel: +421 910 601 407</p>
+                <form method="post" action="sender.php">
+                    <input type="text" name="name" placeholder="Meno a Priezvisko">
+                    <input type="text" name="mail" placeholder="E-mail">
+                    <input type="text" name="subject" placeholder="Predmet">
+                    <textarea name="message" placeholder="Požiadavka..."></textarea>
+                    <button type="submit" name="submit">Poslať</button>
+                </form>
             </div>
         </section>
         <div class="clear"></div>
