@@ -277,7 +277,7 @@
                 <h1>Kontakt</h1>
             </div>
             <div class="contact">
-                <form method="post" action="sender.php">
+                <form method="post" action="mail.php">
                     <input type="text" name="name" placeholder="Meno a Priezvisko">
                     <input type="text" name="mail" placeholder="E-mail">
                     <input type="text" name="subject" placeholder="Predmet">
