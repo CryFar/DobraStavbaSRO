@@ -339,10 +339,10 @@
                     ?>
                 </div>
                 <form method="post" action="index.php#kontakt">
-                    <input type="text" name="name" placeholder="Meno a Priezvisko">
-                    <input type="text" name="mail" placeholder="E-mail">
-                    <input type="text" name="subject" placeholder="Predmet">
-                    <textarea name="message" placeholder="Požiadavka..."></textarea>
+                    <input type="text" name="name" placeholder="Meno a Priezvisko" required>
+                    <input type="email" name="mail" placeholder="E-mail" required>
+                    <input type="text" name="subject" placeholder="Predmet" required>
+                    <textarea name="message" placeholder="Požiadavka..." required></textarea>
                     <button type="submit" name="submit">Poslať</button>
                 </form>
             </div>
