@@ -23,6 +23,9 @@
         <div class="logo">
             <img src="Style/Logo Rectangle.svg" alt="logo">
         </div>
+        <div class="contactinfo">
+            Mobil: <b>+421910605977</b> E-mail: <b>davidulo123@gmail.com</b>
+        </div>
         <div class="hamburger" id="menu">
             <span></span>
             <span></span>
@@ -276,8 +279,66 @@
             <div class="heading">
                 <h1>Kontakt</h1>
             </div>
+            
             <div class="contact">
-                <form method="post" action="mail.php">
+                <div>
+                    <?php
+                        error_reporting(0);
+
+                        use PHPMailer\PHPMailer\PHPMailer;
+                        use PHPMailer\PHPMailer\Exception;
+
+                        require 'PHPMailer/src/Exception.php';
+                        require 'PHPMailer/src/PHPMailer.php';
+                        require 'PHPMailer/src/SMTP.php';
+
+                        // Instantiation and passing `true` enables exceptions
+                        $mail = new PHPMailer(true);
+                        $mail->CharSet = "UTF-8";
+
+                        try {
+                            //Server settings                   // Enable verbose debug output
+                            $mail->isSMTP();                                            // Send using SMTP
+                            $mail->Host       = 'smtp.gmail.com';                    // Set the SMTP server to send through
+                            $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
+                            $mail->Username   = 'davidulo123@gmail.com';                     // SMTP username
+                            $mail->Password   = 'kokot7788';                               // SMTP password
+                            $mail->SMTPSecure = 'tls';         // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
+                            $mail->Port       = 587;                                    // TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
+                            $mail->SMTPOptions = array(
+                                'ssl' => array(
+                                    'verify_peer' => false,
+                                    'verify_peer_name' => false,
+                                    'allow_self_signed' => true
+                                )
+                            );
+
+                            //Recipients
+                            $mail->setFrom('davidulo123@gmail.com', 'Dobrá Stavba s.r.o.');
+                            $mail->addAddress('davidulo123@gmail.com', 'Dávid Slačka');
+                            $mail->addAddress($_POST['mail'], $_POST['name']);
+                            $mail->addReplyTo($_POST['mail'], $_POST['name']);
+
+                            // Content
+                            $mail->isHTML(true);                                  // Set email format to HTML
+                            $mail->Subject = 'Dobrá Stavba požiadavka s predmetom: '.$_POST['subject'];
+                            $mail->Body    = 
+                            'Dobrý deň '.$_POST['name'].', <br>
+                            <br>'
+                            .'Dostali sme od vás správu, ak chcete niečo pridať alebo upraviť vo vašej požiadavke odpíšte na tento e-mail. Za krátko vám odpíšeme. Vaša správa bola: <br>
+                            <br>"'
+                            .$_POST['message'].'"<br>
+                            <br>
+                            - Dobrá Stavba s.r.o.';
+
+                            $mail->send();
+                            echo '<h3>Správa bola <b>odoslaná</b>.</h3>';
+                        } catch (Exception $e) {
+                            echo "<h3 style='color: rgb(32, 35, 42);'>Error: {$mail->ErrorInfo}</h3>";
+                        }
+                    ?>
+                </div>
+                <form method="post" action="index.php#kontakt">
                     <input type="text" name="name" placeholder="Meno a Priezvisko">
                     <input type="text" name="mail" placeholder="E-mail">
                     <input type="text" name="subject" placeholder="Predmet">
