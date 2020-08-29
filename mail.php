@@ -2,9 +2,9 @@
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-require 'PHPMailer\src\Exception.php';
-require 'PHPMailer\src\PHPMailer.php';
-require 'PHPMailer\src\SMTP.php';
+require 'PHPMailer/src/Exception.php';
+require 'PHPMailer/src/PHPMailer.php';
+require 'PHPMailer/src/SMTP.php';
 
 // Instantiation and passing `true` enables exceptions
 $mail = new PHPMailer(true);
@@ -19,6 +19,13 @@ try {
     $mail->Password   = 'kokot7788';                               // SMTP password
     $mail->SMTPSecure = 'tls';         // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
     $mail->Port       = 587;                                    // TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
+    $mail->SMTPOptions = array(
+        'ssl' => array(
+            'verify_peer' => false,
+            'verify_peer_name' => false,
+            'allow_self_signed' => true
+        )
+    );
 
     //Recipients
     $mail->setFrom('davidulo123@gmail.com', 'Dávid Slačka');
